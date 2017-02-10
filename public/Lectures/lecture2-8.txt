@@ -1,0 +1,148 @@
+CSS
+
+Extra Resources:
+	W3Schools
+	MDN
+	youtube: devtips channel
+	CSS-Tricks
+
+Show Cool Examples!
+
+CSS - Cascading Style Sheets
+	Seperates content from design
+
+Basic Syntax
+	Selectors
+	Properties and values
+
+Inline vs. Embedded vs. External Style Sheet
+	Preferred Methond: External 
+	Order of Precedence
+	Seperation of Concerns
+
+Comments:
+
+	Exercise: Wire up a Stylesheet (Always link your style sheet last and before style tags)
+
+Other selectors (MDN)
+	All *
+
+
+Colors site
+	coolors.co
+
+How do I even full stack?
+	server (computer that's built to talk to computers)
+	"stack" -> set of technologies that work together
+
+	human (asks) -> browser -> asks the server for stuff(requests)
+	server -> figure out if/how to send that stuff to the human -> browser in HTML/CSS/JS
+
+	front-end - Stuff in the browser the user sees and interacts with (clink links, submit forms)
+		-HTML == "what you say" == content and structure
+		-CSS == "how you say it" == styling and presentation
+		-JS == "how we add interactivity" == how does the stuff in the browser get up and dance == "logic after the page loads"
+
+	back-end - server, file system, ways to store data, logic to check that data logic before the page loads in the browser
+		- Ubuntu linux == operating system (operating systems )
+		- PHP = logic language for programming server-side logic (logic before the page loads)
+		- MySQL == database == place to store stuff and access it later
+
+
+JSON == specially formatted text that follows very specific rules in order to declare data
+all code is just text
+
+What is a VM 
+	- computer inside your computer
+	- running a server, running linux
+	- run windows
+
+vagrant-lamp WTH?
+	~/vagrant-lamp/
+		README.md       -explains WTH the vagrant-lamp folder IS
+		Vagrantfile     -instructions for how to build/provision our VM
+		ansible	        -scripts for configuring our VM server
+		sites/          -a .dev for each project
+			codeup.dev/
+				public/     -content in the public folder is served to browsers
+/vagrant on the ubuntu server VM mirrors ~/vagrant-lamp on the mac
+
+file paths (command line or <img src="img/logo.png">)
+	relative paths:
+		- on hello_world.html, we have <img src="img/logo.png">
+			public/hello_world.html
+				  /img/logo.png
+
+	absolute == provide the full path to the file/resource
+		filesystem = /Users/myMacUsername/vagrant-lamp/sites/codeup.dev/public
+		html/css = "/" mean root, but in web root means the public folder of that domain(codeup.dev)
+
+Block/in-line:
+	block elements fill their container	
+div/span
+	div are just containers
+	span are containers but are in-line
+
+box model
+	all content is in rectangles(not including rounded corners)
+	how we add up the size of each rectangle
+
+Searching a different website from yours:
+	making sure that the other site accepts request from sites that isn't theirs.
+	APIs
+
+Arrays == lists
+
+Query strings to make links:
+	whatever-the-domain-is.com/resource.html?key1=value1&key2=value2
+
+CSS = language of presentation, language of styling, "how" the content is shown
+	- your design decisions and layout and presentation
+	- your look is up to you
+	- "make it not look like bootstrap"
+	- the more you write CSS and decide to make each project have its own look or coherent look, the better
+
+loops 
+	- are just specific lines of code that run 0 or more times
+
+functions
+	- sequence of steps = one or more lines of code with a name
+
+DOM 
+	- document = HTML file and everything in it
+
+Class vs ID
+	IDs are SKU# or SS# for html elements
+	classes are "categories" of html elements
+
+joins 
+	- aggregating data
+
+OOP - object oriented programming
+	- way of thinking about our application such that all the proper nouns in the specifications or design or features of the app are represented by objects
+	- user
+	- post
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

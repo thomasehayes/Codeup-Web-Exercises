@@ -1,0 +1,53 @@
+body {
+	background: rgba(74,74,74,1);
+background: -moz-linear-gradient(left, rgba(74,74,74,1) 0%, rgba(36,36,36,1) 0%, rgba(31,31,31,1) 5%, rgba(48,48,48,1) 19%, rgba(0,0,0,1) 37%, rgba(68,68,68,1) 48%, rgba(74,74,74,1) 49%, rgba(122,122,122,1) 66%, rgba(176,176,176,1) 75%, rgba(133,133,133,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(74,74,74,1)), color-stop(0%, rgba(36,36,36,1)), color-stop(5%, rgba(31,31,31,1)), color-stop(19%, rgba(48,48,48,1)), color-stop(37%, rgba(0,0,0,1)), color-stop(48%, rgba(68,68,68,1)), color-stop(49%, rgba(74,74,74,1)), color-stop(66%, rgba(122,122,122,1)), color-stop(75%, rgba(176,176,176,1)), color-stop(100%, rgba(133,133,133,1)));
+background: -webkit-linear-gradient(left, rgba(74,74,74,1) 0%, rgba(36,36,36,1) 0%, rgba(31,31,31,1) 5%, rgba(48,48,48,1) 19%, rgba(0,0,0,1) 37%, rgba(68,68,68,1) 48%, rgba(74,74,74,1) 49%, rgba(122,122,122,1) 66%, rgba(176,176,176,1) 75%, rgba(133,133,133,1) 100%);
+background: -o-linear-gradient(left, rgba(74,74,74,1) 0%, rgba(36,36,36,1) 0%, rgba(31,31,31,1) 5%, rgba(48,48,48,1) 19%, rgba(0,0,0,1) 37%, rgba(68,68,68,1) 48%, rgba(74,74,74,1) 49%, rgba(122,122,122,1) 66%, rgba(176,176,176,1) 75%, rgba(133,133,133,1) 100%);
+background: -ms-linear-gradient(left, rgba(74,74,74,1) 0%, rgba(36,36,36,1) 0%, rgba(31,31,31,1) 5%, rgba(48,48,48,1) 19%, rgba(0,0,0,1) 37%, rgba(68,68,68,1) 48%, rgba(74,74,74,1) 49%, rgba(122,122,122,1) 66%, rgba(176,176,176,1) 75%, rgba(133,133,133,1) 100%);
+background: linear-gradient(to right, rgba(74,74,74,1) 0%, rgba(36,36,36,1) 0%, rgba(31,31,31,1) 5%, rgba(48,48,48,1) 19%, rgba(0,0,0,1) 37%, rgba(68,68,68,1) 48%, rgba(74,74,74,1) 49%, rgba(122,122,122,1) 66%, rgba(176,176,176,1) 75%, rgba(133,133,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a4a4a', endColorstr='#858585', GradientType=1 );
+}
+.box1 {
+	background-color: white;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1da36+0,fefcea+74,fefcea+77 */
+background: rgb(241,218,54); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(241,218,54,1) 0%, rgba(254,252,234,1) 74%, rgba(254,252,234,1) 77%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(241,218,54,1) 0%,rgba(254,252,234,1) 74%,rgba(254,252,234,1) 77%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(241,218,54,1) 0%,rgba(254,252,234,1) 74%,rgba(254,252,234,1) 77%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1da36', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.container {
+	margin-bottom: 10px;
+
+}
+
+p {
+	padding-left: 10px;
+}
+.col-md-3 > strong {
+	padding-left: 10px;
+}
+
+.navbar-fixed-top {
+	margin-bottom: 0;
+}
+
+#bs-example-navbar-collapse-1 > ul > li > a {
+	font-size: 16px;
+}
+
+.col-md-6.about {
+	background-color: white;
+}
+
+.codeup {
+	size: 50%;
+}
+
+.paycom {
+	padding-bottom: 10px;
+	padding-left: -10px;
+}

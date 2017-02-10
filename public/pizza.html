@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/stylesheet.css">
+		
+		<title>Pizza Time!</title>
+		
+	</head>
+
+	<body id="pizza">
+		
+		<h1>PIZZA TIME!</h1>
+		
+		<form method="GET" action="/pizza.html">
+			<fieldset>
+				<!-- <legend>Order Here!</legend> -->
+				
+				<h3>Pick a Crust</h3>
+				<div id="crust">
+					<label><input type="radio" id="cr1" name="cr[]" value="handtoss">Hand Toss</label>
+					
+					<label><input type="radio" id="cr2" name="cr[]" value="deepdish">Deep Dish</label>
+					
+					<label><input type="radio" id="cr3" name="cr[]" value="thin">Thin</label>
+					
+					<label><input type="radio" id="cr4" name="cr[]" value="pan">Pan</label>
+				</div>
+				
+				<h3>Choose Your Cheeses</h3>
+					<div id="cheese">
+						<label><input type="checkbox" id="ch1" name="ch[]" value="mozz">Mozzarella</label>
+
+						<label><input type="checkbox" id="ch2" name="ch[]" value="parm">Parmesan</label>
+
+						<label><input type="checkbox" id="ch3" name="ch[]" value="feta">Feta</label>
+
+						<label><input type="checkbox" id="ch4" name="ch[]" value="blue">Blue Cheese</label>
+					</div>
+				
+				<h3>Choose Your Meats</h3>
+					<div id="meat">
+						<label><input type="checkbox" id="mt1" name="mt[]" value="sausage">Sausages</label>
+
+						<label><input type="checkbox" id="mt2" name="mt[]" value="bacon">Bacon</label>
+						
+						<label><input type="checkbox" id="mt3" name="mt[]" value="ham">Ham</label>
+
+						<label><input type="checkbox" id="mt4" name="mt[]" value="chicken">Grill Chicken</label>
+					</div>
+
+				<h3>Choose Your Veggies</h3>
+					<div id="veggies">
+						<label><input type="checkbox" id="vg1" name="vg[]" value="grill">Grilled Veggies</label>
+
+						<label><input type="checkbox" id="vg2" name="vg[]" value="mushroom">Mushrooms</label>
+						
+						<label><input type="checkbox" id="vg3" name="vg[]" value="spinach">Spinach</label>
+
+						<label><input type="checkbox" id="vg4" name="vg[]" value="pepper">Peppers</label>
+					</div>
+				
+					<div id="button">
+						<button type="submit">Order!</button>
+					</div>	
+				<legend>Order Here!</legend>
+			</fieldset>
+		</form>
+	</body>
+
+
+</html>	

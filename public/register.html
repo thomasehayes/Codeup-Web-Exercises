@@ -1,0 +1,65 @@
+<!--
+<?php
+  var_dump($_GET);
+  var_dump($_POST);
+?>
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/stylesheet.css">
+		
+		<title>Register with Pizza Time!</title>
+		
+	</head>
+
+	<body>
+		<h1>Registration</h1>
+		<form method="POST" action="/register.html">
+     		<fieldset>
+				<legend>Profile Info</legend>
+				
+				<div id="first_name">
+					<label for="first_name">First Name</label>
+					<input id="first_name" name="first_name" type="text">
+				</div>
+				
+				<div id="last_name">
+					<label for="last_name">Last Name</label>
+					<input id="last_name" name="last_name" type="text">
+				</div>
+				
+				<div id="username">
+     		    	<label for="username">Username</label>
+     		    	<input id="username" name="username" type="text" placeholder="Enter Username">
+     			</div>
+				
+				<div id="password">
+     		    	<label for="password">Password</label>
+     		    	<input id="password" name="password" type="password" placeholder="Enter Password">
+				</div>
+				
+				<div id="email">
+					<label for="email">Your Email Address</label>
+					<input type="text" id="email">
+				</div>
+    			
+				<div id="newsletter">			
+					<label for="newsletter">Sign Me Up For The Newsletter!</label>
+					<input type="checkbox" id="newsletter" name="newsletter" value="yes">
+				</div>
+				
+				<a href="pizza.html" class="button">Create User and Order a Pizza</a>
+				
+			</fieldset>
+
+		</form>
+	
+	</body>
+
+</html>

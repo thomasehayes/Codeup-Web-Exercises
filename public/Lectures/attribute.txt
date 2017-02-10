@@ -1,0 +1,57 @@
+Attributes
+	<tag key="value">Content</tag>
+		key-value pair inside an opening tag that defines a property of an element
+
+Element
+	<tag key="value">Content</tag>
+	tags + content
+		sometimes no content
+	
+Semantic Tags
+	<section></section>
+		multiple things that can go together should go in section tags
+	<article></article>
+		best for something that is displayed on its own, i.e., blogs
+
+
+Block vs inline elements
+	Div vs Span
+	p vs strong
+	inline always within block
+
+Inline: em, strong
+
+Block: p, h1
+
+Void Elements: <br>, <img>, <meta>, <hr>
+
+When you click a link or submit a form, you send a request
+method === Types of Requests
+GET and POST
+
+GET is a download request
+	Clicking links is a GET request
+	typing in an address is a GET request
+	Any GET Request can be bookmarked
+	The forms that send GET requests are usually searches
+
+POST
+	sending data
+
+	<label ***for=""></label>
+	and 
+	<input ***id=""> need to be the same
+
+	Homework 2/7
+	Make a form for ordering pizza!
+	with as much real world options as you can think of
+
+	Make a new user registration form with the appropriate input types
+		-first name, last name
+		-username, password
+		-add a checkbox for "sign me up for the newsletter"
+		-BONUS: add an image input so fols can add an avatar image
+
+	Make a real estate search form with appropriate input types and values
+	Bonus: wire it up to a real site
+

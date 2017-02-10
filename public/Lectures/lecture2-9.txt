@@ -1,0 +1,7 @@
+Bootstrap Overview
+	Definition - CSS Framework
+	Source Code
+	Library vs Framework
+		library - tools to help customize your code
+		framework - customizing the framework on how you want it to be
+	CSS Reset (Normalize CSS)

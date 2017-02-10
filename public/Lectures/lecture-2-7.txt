@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		information about the document/CSS
+
+		*** keep these in your head tags
+		
+		<title>Lecture</title>
+		
+		***<meta charset="utf-8">
+
+		<meta name="description" content="describe in any way">
+
+		<meta name="keywords" content="dog, cat">
+
+		***<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			this helps for smart phones see the information better
+
+		<link rel="stylesheet" href="">
+
+	</head>
+
+	<body>
+		Actual Content
+		TEST TEST TEST TEST
+		n<!-- command forward slash comments out the line -->
+	</body>
+
+
+</html>

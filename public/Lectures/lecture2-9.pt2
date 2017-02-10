@@ -1,0 +1,16 @@
+-"Secret" to bootstrap
+	-"just" add classes to html elements
+		- find a visual example of what you want to do on the bootstrap site
+
+two approaches
+	- build it up frmo scratch
+		-methodical
+	- grap a template
+
+- adding your own CSS
+	<link href="/css/bootstrap.css">
+	<link href="/css/my-own.css">
+
+- how to get the selector for a specific item (without slapping id on everything)
+	-inspect>highlight selector>right click> copy selector
+	

@@ -1,0 +1,30 @@
+version control system (VCS)
+-git
+	- version control system
+		1.0
+		1.1
+		2.0
+	- permanent record
+		- what changed, when, by whom, for what reason?
+		- composed of snapshots
+	- time machine
+		- "checkout" snapshot
+		- travel to different times in the code
+	- travel to parallel universes
+		- branches
+
+	-record of code is compose of many commits
+
+
+get in the codeup.dev folder in the terminal
+	type in git init
+
+workflow
+	-write, edit, edit code/files
+	-save your work in sublime
+	add your work (stage for commit)
+	-commit your work (commits are snapshots)
+	-push to github
+
+git add index.html
+git add css/
