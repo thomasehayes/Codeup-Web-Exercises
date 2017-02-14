@@ -1,0 +1,124 @@
+Actions = Statements
+
+If
+If/Else
+Else if
+Comparison Operators
+Ternary Operators
+
+
+If Structure ------
+
+if (condition) {
+	action;
+}
+
+Else --------------
+
+if (condition) {
+	action;
+} else {
+	action;
+}
+
+Else if -----------
+
+if (condition1) {
+	action; runs if condition1 is true
+} else if (condition2){ runs if condition1 is false and condition2 is true
+	action;
+} else { runs if condition1 and condition2 is false
+	action;
+}
+
+Comparison Operators ----------------
+
+Operator	Description
+==			equal to (value)
+===			equal to (type and value)
+!=			not equal to (value)
+!==			not equal to (type and value)
+>			greater than
+<			less than
+>=			greater than or equal to
+<=			less than or equal to
+
+
+Ternary Operator (Shorthand If/Else) ---------
+
+(condition) ? returnValueIfTure : returnValueIfFalse;
+
+If Else Exercises:
+-Knowing that a student's grades are 70, 80, 95. Write a JS program, using conditionals that logs to the console "You're awesome" if the average of her grades is greater than 80, otherwise the message should be "You need to practice more".
+	var highGrades = ((70+80+95)/3);
+
+	if (highGrades > 80) {
+		console.log("You're awesome!");
+	}	else {
+		console.log("You need to practice more.");
+	}
+
+or
+
+	var grade1 = 70,
+	grade2 = 80,
+	grade3 = 95,
+	numberOfGrades = 3,
+	gradeAverage = (grade1 + grade2 + grade3) / numberOfGrades;
+
+	if (gradeAverage >80) {
+		console.log("You're awesome!");
+}	else {
+	console.log("You need to practice more.");
+	}
+
+-HEB has an offer for the clients that buy products amounting more than $200 Write a JS program, using conditionals, that logs to the browser, how much does Ryan, Cameron and George need to pay. We know that Cameron bought $180, Ryan $250 and George $320. Your program will have to display a line with the name of the person, the amount before the discount, if any, and the amount after the discount.
+Suppose your friend Isaac cannot decide between two options. He doesn't know if he should buy a car or a new house. Help him decide! Write a small JS program. The following line generates either a 0 or a 1 randomly. A 35% discount should be applied to any amount over $200. Output should look like:"Pam bought $300.00 of groceries. Discount was applied. Final payment: $275.00"
+
+
+
+-var flipACoin = Math.floor(Math.random()* 2)
+Add an if statement to log a "Buy a car" to the console if the result is 0 and "Buy a house" if the result is 1. Could this program be written using a ternary operator?
+	
+	var flipACoin = Math.floor(Math.random()*2);
+
+	if (flipACoin === 0) {
+		console.log("Buy a car");
+	} else {
+		console.log("Buy a house");
+	} 
+
+	var flipACoin = (flipACoin === 0) ? "Buy a car" : "Buy a house";
+	console.log(flipACoin);
+
+
+While Loops ---------------
+
+While loop lets us run code repeatedly until a condition is met
+General Form
+while (condition) {
+	statements
+}
+
+how it executes
+1) check condition
+	2a) if true, execute the body
+		3)go to step 1
+	2b) if false, go to the closing curly brace
+
+
+do-while loop - while loop that will always execute at least once
+
+do{
+	statement
+} while (condition);
+
+1)execute body
+2)check condition
+	3a)if true, go to step 1
+	3b)if false, carry on
+
+
+
+
+

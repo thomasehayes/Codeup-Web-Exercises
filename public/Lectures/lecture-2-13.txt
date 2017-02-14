@@ -1,0 +1,152 @@
+
+README.md 
+	- md stands for markdown
+	- will render as html
+	- description of project, technologies using to do this project, instructions on how to get project onto someone's local.
+
+git log
+	- all the commits that have happened 
+
+--------
+JS 
+--------
+-Data Types
+	-number == 1 
+	-string == "hello"
+	-boolean == true/false
+	-undefined == indicates a value that is not yet defined
+	-null == denotes an absence of a value but it is defined
+
+repl == read, evaluate, print, and loop
+	- entering a var in the console will show undefine because of repl
+	- whenever you type in the var, then it will show the defined value
+
+= is the assigning operator 
+
+typeof will return what kind of data type it is
+
+constants (const) are values that cannot change
+	- for things that aren't going to change
+
+
+Booleans 
+	-AND Operation	Result-
+	false && false	false
+	false && true	false
+	true && false	false
+	true && true	true
+
+	-OR Operation	Result-
+	false || false	false
+	true || false	true
+	false || true	true
+	true || true	true
+
+	-NOT Operator	Result-
+	!false	true
+	!true	false
+
+	!!'true'
+	true
+	typeof (!!'true')
+	boolean
+	any non-empty string is true boolean
+	if it is empty, then it is false
+
+In JavaScript, the following values will evaluate to false.
+	false
+	null
+	undefined
+	0
+	"" or '' (empty string)
+	NaN (special constant for not-a-number)
+	Any other values will evaluate to true.
+
+Boolean Exercises
+	var isPremiumUser = true;
+	var productHasOffer = false;
+
+-A student can be enrolled to a class only if the class is not full and the class schedule does not conflict with her current schedule.
+	var canBeEnrolled = !classIsFull && !HasScheduleConflict;
+
+-A product offer can be applied only if people buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+	var offerCanBeApplied = ((numItemsBought > 2) || isPremiumMember) && !isExpired
+
+-A person receives a movie recommendation only if she has seen at least one movie of the same actor or three movies of the same category. The movie is also recommended if the person has qualified at least one movie of the same category as very good.
+	var categoryRating = // get the rating for the given category
+	var numberOfMoviesWithCategorySeen = 2;
+	var numberOfMoviesWithCategorySeen = 2;
+	var receivesRecommendation = (categoryRating == 'very good') || ((numberOfMoviesWithCategorySeen >= 3) || (numberOfMoviesWithCategorySeen >=1))
+
+Numbers
+
+	How to shorthand
+	var myNumber = 42;
+	myNumber = myNumber *4;
+	168
+	or 
+	myNumber *=4;
+
+Unary Operators
+	Operator	Name
+	++			Increment
+	--			Decrement
+	+			Plus
+	-			Minus
+
+-----------------------------------
+
+variables hold values
+values have data type
+
+wherever you use a variable, it's a substitute for the value assigned to it. 	
+
+ASSIGNMENT
+var favoriteNumber = 23;
+
+REASSIGNMENT
+favoriteNumber = 25;
+
+
+Numbers Exercise
+-You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
+
+	var pricePerDay = 3;
+	var littleMermaid =3 * pricePerDay;
+	Var brotherBearPrice = 5 * pricePerDay;
+	var herculesPrice = 1 * pricePerDay;
+	var totalCost = brotherBearPrice + littleMermai + herculesPrice
+
+-Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+
+	var googlePay = 400;
+	var amazonPay = 380;
+	var facebookPay = 350;
+	var hoursWorkedForFacebook = 10;
+	var hoursWorkedForGoogle = 6;
+	var hoursWorkedForAmazon = 4;
+	var total = (googlePay * hourWorkedForGoogle) + (facebookPay * hoursWorkedForFacebook) + (amazonPay * hoursWorkedForAmazon);
+
+
+-----------------------------------
+
+Strings
+
+-----------------------------------
+
+**** messages[message.length -1] will return the last letter in the string
+
+expression == any value, operation, function, that gives you back a simple value. 
+	value is the same as expression. 
+
+-----------------------------------
+
+JS
+
+-----------------------------------
+
+// Use strict statement
+"use strict";
+
+
+
