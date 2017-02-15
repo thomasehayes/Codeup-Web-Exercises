@@ -1,0 +1,33 @@
+For Loops
+
+While Loop typically used when actions need to continue until a condition is met.
+	
+	vs.
+
+For Loop typically used when actions need to be performed a given number of times. Often used when you need to do something for each item in a list of items. 
+
+The three expressions that create a structure of a for loop...
+
+for (iterator initalization; condition; incrementor) {
+	statements go here;
+}
+
+For loop diagram
+
+For loop syntax (example)
+
+for (var i = 0; i <= 10; i++) {
+	console.log(i);
+}
+
+Loop Nesting
+
+for (var i = 0; i <= 10; i++) {
+	console.log("Badger, Badger, Badger, Badger, Badger"); {
+	for (var j = 0; j<= 1; j++)
+		console.log(Mushroom");
+	}
+}
+
+
+codewars.com for extra challenges
