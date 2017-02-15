@@ -5,7 +5,7 @@ for (var i = 1; i < 10; i++) {
 	console.log((i + "").repeat(i));
 }
 
-	console.log("0000000000");
+	console.log((0 +"").repeat(i));
 
 
 //question 2
