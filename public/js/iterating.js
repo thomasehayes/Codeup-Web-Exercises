@@ -9,5 +9,8 @@
     console.log(names.length);
 
     // TODO: Create log statements that will print each of the names array elements individually.
-    console.log(names);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 })();
