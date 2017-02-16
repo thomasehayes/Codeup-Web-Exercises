@@ -1,0 +1,118 @@
+Array
+
+Array definition: an object that contains a collection/list of items
+
+Array list of methods: w3schools.com/jsref/jsref_obj_arrau/asp
+
+Array declaration
+
+var someArray = []; // declare array
+var ages = [22,24,17,26,42]; // declare and initialize array
+var anotherArray = ["hello","world"];
+var anotherArray = new Array("hello", "world");
+
+view contents of an array
+	console.log(ages);
+
+counting array items
+	console.log(ages.length);
+
+
+Iterating Over Arrays
+
+Iterating 
+	For Loop
+	For-Each Loop
+
+For Loop Iteration 
+'use strict';
+// declare and initialize array
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// loop through the array and log the values
+for (var i = 0; i < shapes.length; i++) {
+    console.log('The shape at index ' + i + ' is: ' + shapes[i]);
+}
+
+For-Each Loop Iteration
+'use strict';
+// declare and initialize array
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// loop through the array and log the values
+shapes.forEach(function (element, index, array) {
+
+    // element is the shape name
+    // index is the iterator
+    // array is the shapes array itself
+
+    console.log('The shape at index ' + index + ' is: ' + element);
+});
+
+For Loop
+
+var bondVillains = ["name 0","name 1","name 2","name 3","name 4"];
+for (var i=0; i < bondVillains.length; i++) {
+	console.log("let's have a little fun with Mr. " + index + ".");
+}
+
+
+Manipulating Array
+.push === puts element of array at the end of the array
+.unshift === puts element of array at the beginning of the array
+.shift === removes first index of array
+.pop === removes last index of array
+
+
+Splitting and Joining
+
+Splitting
+"use strict";
+
+var namesString = "Joe,Bob,Sally";
+
+console.log(namesString);
+// Joe,Bob,Sally
+
+var namesArray = namesString.split(',');
+
+console.log(namesArray);
+// ['Joe', 'Bob', 'Sally']
+
+Joining
+'use strict';
+
+var namesArray = ['Joe', 'Bob', 'Sally'];
+
+console.log(namesArray);
+// ['Joe', 'Bob', 'Sally']
+
+var namesString = namesArray.join(',');
+
+console.log(namesString);
+// Joe,Bob,Sallyo
+
+
+Review 
+//operating on a copy of the data
+.toUpperCase()
+.toLowerCase()
+.substring()
+
+
+//changes the original
+.pop()
+.push()
+.shift()
+.unshift()
+
+
+
+Hoisting
+============
+
+
+
+
+
+
