@@ -32,6 +32,5 @@ var random = Math.floor((Math.random()*100)+1);
 	}
 
 // // TODO: Call the function 'isOdd' passing the variable 'random' as a parameter.
-	isOdd(random)
-
-	;})()
+	isOdd(random);
+})()
