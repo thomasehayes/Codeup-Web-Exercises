@@ -30,4 +30,33 @@ for (var i = 0; i <= 10; i++) {
 }
 
 
+=================
 codewars.com for extra challenges
+=================
+
+===============
+Functions 
+===============
+- sometimes functions return a value/expression
+- sometimes the function does something like console.log();
+
+- lines of code that run when we tell them to
+	console.log(); displays value within () 
+	parseInt(); returns(gives back) a number
+	parseFloat(); gives back a number
+	isNaN(); gives back a boolean expression
+
+
+// general form of a function definition
+
+function addTwoNumbers (a, b) {
+	return a + b;
+}
+
+//calling or invoking a function
+addTwoNumbers(2, 3);
+
+
+
+
+
