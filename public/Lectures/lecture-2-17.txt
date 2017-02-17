@@ -1,0 +1,35 @@
+============Objects
+
+An associative array in JavaScript
+A set of key/value pairs.
+Objects may have state ()
+
+example of an object
+
+//About phone
+
+var cellPhone = {
+	color: "black",
+	brand: "iPhone",
+	model: "5s",
+	storage: "16gb",
+	manufactured: "2010",
+	carrier: "AT&T",
+	locked: true,
+	unlocked: function () {
+		this.locked = false;         //this. replaces needing to write 								//.cellPhone
+	},
+	lock: function () {
+		this.locked = true;
+	}, 
+	makeACall: function() {
+		return "Making a call.";
+	},
+	text: function() {
+		return "Sending a text.";
+	}
+}
+
+the functions are called methods within this. Color, brand, model, etc. are properties of cellPhone.
+
+===========JSON - JavaScript Object Notation
