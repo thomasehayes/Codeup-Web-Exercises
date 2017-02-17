@@ -33,3 +33,46 @@ var cellPhone = {
 the functions are called methods within this. Color, brand, model, etc. are properties of cellPhone.
 
 ===========JSON - JavaScript Object Notation
+
+
+===========Math
+Methods: Math.random(), Math.round(), Math.floor()
+
+Math.random()
+
+var someFloat=Math.random();
+	console.log(someFloat);
+
+Math.round()
+var roundedNumber = Math.round(1.45);
+	console.log(roundNumber);
+
+Math.floor === rounds down
+
+Math.ceil === rounds up
+
+Math.pow() === (8 to the second power = 64)
+var power = Math.pow(8, 2);
+console.log(power)
+
+Constatns: Math.E, Math.PI --- constants are uppercases
+
+
+Agenda:
+
+How to approach iterating => work on just ONE element of the array
+
+Objects in JS
+
+exercises
+
+review
+
+=========BOM
+
+
+
+
+
+
+
