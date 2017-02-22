@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO9hvB5URYNxWFtVLsEwVRsWkz9u7EqXE"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 17,
+        };
+    // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    // Create lat and long for our marker position
+    // Set our address to geocode
+        var address = "Korean Mall - Furneaux Creek Village Shopping Center, 2625 Old Denton Rd #326, Carrollton, TX 75007";
+
+    // Init geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+    // Geocode our address
+        geocoder.geocode({ "address": address }, function(results, status) {
+
+    // Check for a successful result
+       if (status == google.maps.GeocoderStatus.OK) {
+
+    // Recenter the map over the address
+        map.setCenter(results[0].geometry.location);
+        console.log(results);
+
+    // Create lat and long for our marker position
+
+        var food = {
+                lat:  32.986137,
+                lng: -96.912652
+            }
+
+    //Description of marker
+    var contentString = "<h1>OMI\'S</h1>"+ "<p>All you can eat Korean food!What else could you ask for?</p>";
+
+    // Create a new infoWindow object with content
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+        position: food,
+        map: map,
+        animation: google.maps.Animation.DROP
+        });
+
+    marker.addListener('click', toggleBounce);
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+
+    google.maps.event.addListener(map,"click",function(){
+        infowindow.close();
+    });
+
+    // Open the window using our map and marker
+    marker.addListener("click", function(){
+    infowindow.open(map, marker);
+});
+        } else {
+
+    // Show an error message with the status if our request fails
+        alert("Geocoding was not successful - STATUS: " + status);
+       }
+    });
+
+    })();
+
+ 
+
+
+    </script>
+</body>

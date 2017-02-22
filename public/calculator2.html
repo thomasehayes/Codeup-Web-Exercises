@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link href="css/calculator2.css" rel="stylesheet">
+</head>
+<body>
+	<form>
+		<div id ="container">
+			<input class="forms" type="text" id="leftDisplay" readonly>
+			<input class="forms" type="text" id="operatorDisplay" value="" readonly>
+			<input class="forms" type="text" id="rightDisplay" readonly>
+		
+			<br>
+
+			<button type="button" class="number" id="one" value="1">1</button>
+			<button type="button" class="number" id="two" value="2">2</button>
+			<button type="button" class="number" id="three" value="3">3</button>
+			<button type="button" class="operator" value="+" id="plus">+</button>
+			<br>
+
+			<button type="button" class="number" id="four" value="4">4</button>
+			<button type="button" class="number" id="five" value="5">5</button>				
+			<button type="button" class="number" id="six" value="6">6</button>
+			<button type="button" class="operator" value="-" id="minus">-</button>
+			<br>
+					
+			<button type="button" class="number" id="seven" value="7">7</button>
+			<button type="button" class="number" id="eight" value="8">8</button>
+			<button type="button" class="number" id="nine" value="9">9</button>
+			<button type="button" class="operator" value="*" id="multiply">*</button>
+			<br>
+
+			<button type="button" class="final" value="C" id="clear">C</button>
+			<button type="button" class="number" id="zero" value="0">0</button>
+			<button type="button" class="final" value="=" id="equals">=</button>
+			<button type="button" class="operator" value="/" id="divide">/</button>
+		</div>
+	</form>
+
+<script src="js/calc.js"></script>
+</body>
+</html>

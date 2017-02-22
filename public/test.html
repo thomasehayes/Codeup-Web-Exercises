@@ -1,21 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>test</title>
-
-  <style>
-  p > .info {
-    color: blue;
-    }
-    <textarea></style>
-  </style>
-  
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link href="css/calculator.css" rel="stylesheet">
 </head>
-<body>
-
-<p class="info">This is a test.
- <strong class="info">This is a strong test</strong></p>
-
-
-</body>
+	<body>
+<center>
+<h1>Online Calculator</h1>
+<hr/>
+<form name="frmCalculator" action="">
+    <table border="1" cellpadding="1" cellspacing="1" width="30%">
+        <tr>
+            <td colspan="4"><textarea style="width:100%" id="txt" name="txtResult"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="reset" style="width:100%"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7"/></td>
+            <td><input type="button" value="8"/></td>
+            <td><input type="button" value="9"/></td>
+            <td><input type="button" value="+" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" /></td>
+            <td><input type="button" value="5" /></td>
+            <td><input type="button" value="6" /></td>
+            <td><input type="button" value="-" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" /></td>
+            <td><input type="button" value="2"/></td>
+            <td><input type="button" value="3" /></td>
+            <td><input type="button" value="*" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" /></td>
+            <td><input type="button" value="." /></td>
+            <td><input type="button" value="="/></td>
+            <td><input type="button" value="/" /></td>
+        </tr>
+    </table>
+</form>
+</center>
+		</div>
+		
+	<script src="js/calculator.js"></script>
+	</body>
 </html>

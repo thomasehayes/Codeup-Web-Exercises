@@ -1,0 +1,83 @@
+=========DOM (Document Object Model)
+helps change the page dynamically with JS
+
+Get reference the DOM by IDs
+var id = document.getElementById("some ID");
+console.log(id);
+
+Referencing the DOM by Tag Name
+var paragraphs = document.getElementByTagNAme("p");
+console.log(paragraphs);
+
+
+//console logs all elements in the collection
+for (var i =0; i <paragraphs.length; i++) {
+	console.log(i);
+}
+
+Referencing the DOM by Class Name
+var class = document.getElementsByClassName("classname");
+console.log(class);
+
+
+=========DOM Events
+Register event listeners
+Remove event listeners
+
+Review/Question
+
+document.getElementByID("shuffle");
+HTML element
+
+document.getElementsByClassName("container");
+NodeList of HTML elements with that class name
+
+document.getElementsByTagName("div");
+NodeList of HTML elements with that HTML tag
+
+NodeList can't forEach
+
+element.addEventListener("click", function()) {
+	//whatever code we write inside here
+});
+
+<h1 class="orange">Hi everyone</h1>
+var OrangeElements = document.getElementsByClassName("orange")[0];
+// [0] if you know you have only 1
+
+extra practice
+1. create an html page that says hello world
+make a button that changes the text to goodbye world
+make another button that changes it back
+
+2. make an unordered list of programming topics you know
+-assignment
+-comparison
+-conditionals
+
+make a button next to it that bolds all the text
+make another button that un-bolds all the text
+make a 3rd button that changes the text to all caps
+
+
+3. make your hello world page have no background image
+add button that adds a background image of rick astley to the body element
+make another button that undoes this action.
+
+4. make a button that reverses or flips all the text on your page when click
+make another button that reverses this
+
+
+5. Add a text input w/ a label and placeholder text that asks what your favorite band is
+add a button next to it that changes the input's value to say "Rick Astley" when clicked
+
+
+==============JS Calculator
+0. Pick a starting place - look or functionality
+1. "Instructions" are specification from a client
+2. Read the instructions (carefully, methodically, with an attention to detail)
+3. Write out the real world steps that human does with a calculator to get stuff done.
+4. Turn this sequence of steps into pseudo-code
+	//add event listener to every button
+	//when user hits 1, show 1 numeral inside the display
+5. Piece by piece, turn each tiny little step into code

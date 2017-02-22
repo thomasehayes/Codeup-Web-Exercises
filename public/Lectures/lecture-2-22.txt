@@ -1,0 +1,12 @@
+API = application program interface
+	- interface for your program to talk to other programs
+	- give us an interface that we can use
+	- lightswitch is an interface (positive, negative, ground)
+	- interface hide the details
+	- interface defines what we can ask of the other program
+
+BOM - setInterval, setTimeout, alert(), console.log, prompt, confirm()
+
+DOM is our browser's API for the HTML document
+	- .getElementById, .getElementsByClassName, .getElementsByTagName
+	- .addEventListener
