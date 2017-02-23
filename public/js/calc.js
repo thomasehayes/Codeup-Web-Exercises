@@ -5,9 +5,6 @@
 	var middleDisplay = document.getElementById("operatorDisplay");
 	var rightDisplay = document.getElementById("rightDisplay");
 	var operator = document.getElementsByClassName("operator");
-	var final = document.getElementsByClassName("final");
-	var answer = document.getElementsByClassName("answer");
-	var display = document.getElementsByClassName("forms")[0];
 	var numbers = document.getElementsByClassName("number");
 
 	leftDisplay.value = "";
@@ -16,51 +13,61 @@
 
 		function displayNumber() {
 			// append the display's inner text with the innerText of the button clicked
-			console.log(middleDisplay);
-			console.log(middleDisplay.innerText);
-			console.log(middleDisplay.innerHTML);
-			console.log(middleDisplay);
+
 			if (middleDisplay.value == "")
 			{
 				leftDisplay.value += this.innerText;
 			}
-			else if(leftDisplay.value !== "")
-			{
-				if(operator[0].value == "+")
+
+			if(middleDisplay.value !== "")
 				{
-					middleDisplay.value  = "+";
+					rightDisplay.value  += this.innerText;
 				}
-				else if(this.value == "-")
-				{
-					middleDisplay.value = "-";
-				}
-				else if(this.value == "x")
-				{
-					middleDisplay.value = "x";
-				}
-				else if(this.value == "/")
-				{
-					middleDisplay.value = "/";
-				}
-			}
 		}
 		
+		function displayOperator() {
+			middleDisplay.value = this.innerText;
+		}
 
 		for(var i = 0; i < numbers.length; i++) {
 			numbers[i].addEventListener("click", displayNumber);
 
 		}
 
+		for (var i = 0; i <operator.length; i++) {
+			operator[i].addEventListener("click", displayOperator);
+		}
+
 		document.getElementById("clear").addEventListener("click", function() {
-			leftDisplay.innerText = "";
-			operatorDisplay.innerText = "";
-			rightDisplay.innerText = "";
+			leftDisplay.value = "";
+			operatorDisplay.value = "";
+			rightDisplay.value = "";
 		});
 
 		document.getElementById("equals").addEventListener("click", function() {
-			// check the operatorDisplay
-			// if operatorDisplay is "+"
-			// do math on leftDisplay + rightDisplay 
-			// update left display with the result
-			// clear out right display and operator display
+			var result;
+			if(middleDisplay.value !="") {
+			switch (middleDisplay.value){
+				case "+": 
+					result =parseFloat(leftDisplay.value) + parseFloat(rightDisplay.value);
+					break;
+					case "-": 
+					result =parseFloat(leftDisplay.value) - parseFloat(rightDisplay.value);
+					break;
+
+					case "*": 
+					result =parseFloat(leftDisplay.value) * parseFloat(rightDisplay.value);
+					break;
+
+					case "/": 
+					result =parseFloat(leftDisplay.value) / parseFloat(rightDisplay.value);
+					break;
+			}
+			operatorDisplay.value = "";
+			rightDisplay.value = "";			
+			leftDisplay.value = result;
+		} 
 		});
+
+
+
