@@ -5,15 +5,15 @@
 </head>
 <body>
 
-<div id="container">
-	<h1 id="header">Hello Motto</h1>
+<div id="codeup">
+	<h1 class="codeup">Hello Motto</h1>
 
-	<p>This is a paragraph</p>
+	<p class="codeup">This is a paragraph</p>
 
 	<ul>
-		<li class="lists">List 1</li>
-		<li class="lists">List 2</li>
-		<li class="lists">List 3</li>
+		<li>List 1</li>
+		<li>List 2</li>
+		<li>List 3</li>
 	</ul>
 </div>
 
@@ -30,14 +30,8 @@
 $(document).ready(function(){
 
 
-var header = $("#header");
-	alert(header.html());
-	
-
-var container = $("#container");
-container.css("width", "300px");
-container.css("background-color", "#999");
-container.css("text-align","center");
+var codeup = $(".codeup");
+codeup.css("border", "1px solid red");
 
 
 
