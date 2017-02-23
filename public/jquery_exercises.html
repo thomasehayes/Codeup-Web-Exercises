@@ -2,17 +2,20 @@
 <html>
 <head>
 	<title></title>
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div id="codeup">
 	<h1 class="codeup">Hello Motto</h1>
-
+	<h3 id="btn-title">Click me</h3>
 	<p class="codeup">This is a paragraph</p>
 
 	<ul>
 		<li>List 1</li>
-		<li>List 2</li>
+		<li id="list2">List 2</li>
 		<li>List 3</li>
 	</ul>
 </div>
@@ -20,25 +23,45 @@
 
 
 
-<script src="http://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
 
 <script type="text/javascript">
 
 //$(document).ready wrapper to allow code to trigger once DOM is ready  	
 $(document).ready(function(){
 	"use strict";
+	// //anons function on the fly
+	// $("#btn-title").click(function(){
+	// 	console.log("title was clicked with one click")	});
 
-$("li, h1").css({
-	"font-size":"20px",
-	"color": "red",
-});
-$("*").css({
-	"background-color" : "#999",
-	"border" : "dotted 3px black"
-});
+	// $("#list2").click(function(){
+	// 	alert("list 2 has been clicked");
+	// });
+	// $("#list2").css({
+	// 	"background-color": "#999",
+	// 	"color" : "red"
+	// });
+	// //anons fx in steps
+	// var fn = function() {
+	// 	alert("title was clicked with double clicked");
+	// };
+	// $("#btn-title").dblclick(fn);
 
+	//Mouse Events Exercises
+	$("h1").click(function(){
+		$(this).css("background-color", "yellow");
+	});
+
+	$("p").dblclick(function(){
+		$(this).css("font-size", "18px");
+	});
+
+	$("li").hover(
+		function(){
+		$(this).css("color","red");
+	},
+	function(){
+		$(this).css("color","black");
+	});
 
 
 });
