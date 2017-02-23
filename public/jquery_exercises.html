@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="container">
+	<h1 id="header">Hello Motto</h1>
+
+	<p>This is a paragraph</p>
+
+	<ul>
+		<li class="lists">List 1</li>
+		<li class="lists">List 2</li>
+		<li class="lists">List 3</li>
+	</ul>
+</div>
+
+
+
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+//$(document).ready wrapper to allow code to trigger once DOM is ready  	
+$(document).ready(function(){
+
+
+var header = $("#header");
+	alert(header.html());
+	
+
+var container = $("#container");
+container.css("width", "300px");
+container.css("background-color", "#999");
+container.css("text-align","center");
+
+
+
+});
+
+  </script>
+</body>
+</html>
