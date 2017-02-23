@@ -30,10 +30,15 @@
 $(document).ready(function(){
 	"use strict";
 
-$("li").css("font-size","20px");
-$("*").css("background-color", "#999");
+$("li, h1").css({
+	"font-size":"20px",
+	"color": "red",
+});
+$("*").css({
+	"background-color" : "#999",
+	"border" : "dotted 3px black"
+});
 
-alert($("h1").text())
 
 
 });
