@@ -17,4 +17,53 @@ example
 
 .addClass()
 
+
+prevent default
+	$(document).keydown(function(event//this can be called whatever you want){
+	if (event.keyCode ==32){
+	event.preventDefault();
+	}
+	})
+
+
 $("h1").addClass("classname");
+
+
+
+============Traversing Methods
+children are elements within another element
+<html>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
+parent is <ul> of <li>
+body is parent of ul
+html is parent of body
+
+To get the actual element add [0] otherwise you will see just the array that is blank
+for example 
+$("ul")[0];
+gets you the li's 
+
+
+.first()
+
+to get first child
+$("ul").children()[0];
+
+
+$("html").children();
+	only shows body from my example. it doesn't display the body's children
+	to see inside the body from the html. do this
+	$("html").children("body")[0];
+
+
+.each() syntax
+.each(function(index {
+	
+});
