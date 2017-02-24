@@ -1,0 +1,68 @@
+============jQuery Intro
+jqueryui.com gives better looking buttons and pop ups
+jQuery - by far, the most popular JS library
+
+Offers simpler syntax to...
+1) navigate a document
+2) select DOM elements
+3) handle events
+4) create animations
+5) create Ajax applications
+6) add plugins
+
+jQuery download
+	https://code.jquery.com/
+	Version 2.2.4. minified
+
+jQuery object 
+	$ and $()
+
+$(document).ready();
+
+//Changing text/html
+$("element").html("Hello World"); vs. document.getElementByTagName("element")[0].innerHTML = "Hello World";
+
+//Changing CSS styling
+$("element").css("color", "blue"); vs document.getElementsByTagName("element")[0]
+
+how to select DOM with jQuery
+$(document)
+
+if you select a tag name with jQuery
+it will only display the first one
+for example if you have
+<h1>TEST 1</h1>
+<h1>TEST 2</h1>
+
+var header = $("h1");
+console.log(header.html());
+
+
+jQuery may select
+	ID selector - $("#id")
+	class $(".class")
+	element(#"element")
+
+
+
+====================jQuery ID Selector
+ID selector basics
+Chaining methods together
+var id = $("#id)");
+console.log(id) // to see it in console. not needed really for this example.
+
+$("id").css("background-color", "yellow");
+
+
+
+====================Events on jQuery
+
+create events and triggers in whatever element we want. 
+
+
+
+
+
+
+
+

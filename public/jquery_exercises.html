@@ -20,6 +20,10 @@
 	</ul>
 </div>
 
+<form action="#">
+	<label for="input">First Name</label>
+	<input type="text" id="fname" name="fname">
+</form>
 
 
 
@@ -47,22 +51,38 @@ $(document).ready(function(){
 	// $("#btn-title").dblclick(fn);
 
 	//Mouse Events Exercises
-	$("h1").click(function(){
-		$(this).css("background-color", "yellow");
-	});
+	// $("h1").click(function(){
+	// 	$(this).css("background-color", "yellow");
+	// });
 
-	$("p").dblclick(function(){
-		$(this).css("font-size", "18px");
-	});
+	// $("p").dblclick(function(){
+	// 	$(this).css("font-size", "18px");
+	// });
 
-	$("li").hover(
-		function(){
-		$(this).css("color","red");
-	},
-	function(){
-		$(this).css("color","black");
-	});
 
+	// //takes 2 parameters
+	// $("li").hover(
+	// 	function(){
+	// 	$(this).css("color","red");
+	// },
+	// function(){
+	// 	$(this).css("color","black");
+	// });
+
+	//keydown
+	$("#fname").keydown(function(key) {
+		console.log(key.keyCode + " was pressed");
+		if (key.keyCode == 27) {
+			console.log("ESC was pressed");
+		}
+	});
+	//on() is the same as the keydown, just with parameters
+	$("fname").on("keydown", function(key){
+		console.log(key.keyCode + " was pressed");
+		if (key.keyCode == 27) {
+			console.log("ESC was pressed");
+		}
+	});
 
 });
 
