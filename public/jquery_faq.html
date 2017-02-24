@@ -83,26 +83,29 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        "use strict";
+    "use strict";
 
-        $("#facts").click(function(){
-            $(".notInvisible").toggleClass("invisible");
-        });
-        
-    // $("li").each(function(index){
-    //     if (index == 0){
-    //     $(this).css("font-weight","bold");
-    // }
+    // $("#facts").click(function(){
+    //     $(".notInvisible").toggleClass("invisible");
     // });
-    $("ul").each(function(index){
-        $(this).children().first().css("font-weight", "bold")
+        
 
+    // $("ul").each(function(index){
+    //     $(this).children().first().css("font-weight", "bold")
+
+    // });
+
+    // $("li").click(function(){
+    //     $(this).parent().toggleClass("invisible");
+    // });
+
+    $("#facts").click(function(){
+        $(".invisible").toggle();
     });
 
     $("li").click(function(){
-        $(this).parent().toggleClass("invisible");
-    });
-
+        $(this).parent().hide();
+    })
 
     });
 </script>
