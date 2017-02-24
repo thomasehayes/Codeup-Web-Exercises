@@ -1,0 +1,20 @@
+===================jQuery Attribute Methods
+
+Attribute Methods defined:
+.html()
+.css()
+.addClass()
+.removeClass()
+.toggleClass()
+
+example
+.html()
+	//as a getter
+	console.log($("h1"));
+
+	//as a setter
+	console.log($("h1").html("New Header Text"));
+
+.addClass()
+
+$("h1").addClass("classname");
