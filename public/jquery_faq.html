@@ -100,11 +100,19 @@
     // });
 
     $("#facts").click(function(){
-        $(".invisible").toggle();
+        $(".invisible").fadeIn(2000);
     });
 
     $("li").click(function(){
-        $(this).parent().hide();
+        $(this).parent().fadeOut();
+    })
+
+    // $("li").click(function(){
+    //     $(this).parent().hide();
+    // })
+
+    $("h3").click(function() {
+        $(this).next().fadeIn(2000);
     })
 
     });
