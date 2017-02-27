@@ -1,0 +1,67 @@
+==========Intro to Ajax
+AJAX: (A)synchronous (J)avaScript (A)nd (X)ML
+
+Definition: a set of technologies used to...
+	1) retrieve data from a server
+	2) update data/content on a page without a page refresh
+
+Asynchronous - meaning certain processes will fire in the background at unspecified intervals
+
+Ajax using Vanilla JS:
+var someRequest = new XMLHttpRequest();   //Create a new XMLHttpRequest()
+
+someRequest.open("GET", "http://swapi.co/api/people/?search=r2"); //open a GET Request
+
+someRequest.onload = function () {
+	function
+		var swData=JSON.parse(someRequest.responseText);
+		JSON and store the object in the variable swData
+		//do something with swData
+		//begin executing other functionality.....
+
+
+==========Ajax Syntax
+
+var someRequest = $.get("http://swapi.co/api/people/?search=r2").done(function(data){
+	console.log(data.results[0]);
+});
+
+var someRequest = $.ajax({
+	url: "someURL",
+	type: "GET" //POST could be put here instead
+	data: {
+		key: value, // any configuration data to pass to the object
+		key: value,
+		etc...
+	}
+	success: function(data, function(){
+		//this code can manipulate data returned frmo the server once the request is finished
+	});
+});
+
+$.ajax ({
+	url: "someURL",
+	type: "GET" // POST could be put here instead
+	});
+
+$.get("url");
+
+$.ajax({
+	url: "someURL",
+	type: "POST",
+	data: {
+		key: value,
+		key: value,
+		etc...
+	}
+});
+
+
+
+jQuery Documentation. 
+if there are [,][,] => this means its required
+
+
+
+
+
