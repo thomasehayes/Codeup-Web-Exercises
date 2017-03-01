@@ -1,0 +1,76 @@
+Where to start and how to approach the problem?
+	read the instructions very slowly
+	read them twice
+	(if instructions leave stuff out, make the best call you can)
+	write down the exercise in your own words
+	write pseudo-code for each of those steps
+	think about what you've already seen/worked with that does those steps
+	write the specs/instructions as comments in your code
+	get each peiece into a small enough bit
+	where you can google "how to select all p tags in jQuery"
+	or "how to add a click listener with jQuery"
+	how to capitalize the first letter in a string with javascript
+
+	//need a function to make AJAX request
+	//take the data from the AJAX request
+	//if data is array, then work on just the 1st element
+	//if 1st element is object, get just the 1st property
+
+
+
+
+========================================
+          Afternoon Lecture
+========================================
+
+Weather Forecast Exercise
+
+// MAKE THE WEATHER FORCAST
+
+	// make a function to get the weather object from the OpenWeatherMap API
+
+		// base url should be "http://api.openweathermap.org/data/2.5/forecast/daily"
+
+		// parameter cnt controls how many days of forcasts will be returned as an array of objects
+
+		// practice writing console.logs of various parts of the OpenWeatherMap object...
+			// console.log the humidity of the 2nd day
+			// console.log the humidity of all the days (maybe use .forEach?)
+			// console.log the temprature of the 3rd day in celsius
+			// console.log the temprature of the 3rd day in fahrenheit
+			// console.log all types of information you will ultimately display for a single day in the 3-day forcast div
+			// console.log all type of information you will ultimately display for all days in the 3-day forcast divs
+
+	// write html and css to make/style a three-day forcast set of divs (may use design from curriculum)
+
+	// create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.
+
+		// remember to first console.log specific data from the OpenWeatherMap object, then work on adding to the DOM
+
+		// read and reread the curriculum and OpenWeatherMap docs carefully on how to get an image of the weather forcast 
+
+			// hint: "http://openweathermap.org/img/w/" + whateverTheWeatherIconValueIs 
+
+	// verify that the OpenWeatherMap data populates by hard coding in lat and lon values
+
+	// create lat and lon variables to hold lat and lon values.
+
+	// add lat and lon properties to the function that calls the OpenWeatheMap API GET request
+
+	// add an input field for lat and lon with button that fires a new request to the OpenWeatherMap API and passes the lat and lon values from the input fields into the request.
+
+
+
+// CREATE THE GOOGLE MAP
+
+	// using syntax from the previous Google Maps exercise, add a map below the OpenWeatherMap forcast
+	
+	// add a marker to the map and make it draggable
+	
+	// create a marker drag event that console logs the lat and lon where the marker is dropped
+
+
+
+// WIRE UP GOOGLE MAP TO WEATHER API
+
+	// add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <title>Weather Map</title>
+
+   <!-- Bootstrap Core CSS -->
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+        #map-canvas {
+            width: 750px;
+            height: 350px;
+        }
+
+        .weatherBox{
+            width: 250px;
+            height: 240px;
+            background-color: #999;
+            border: solid 1px black;
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+
+        #temp {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        p{
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <main class="container">
+    
+        <h1>Weather Application</h1>
+        <h3 id="city"></h3>
+
+        <form action="http://openweathermap.com/find">
+            <p>
+                <label for="search">Find City</label>
+                <input type="text" name="q" id="q">
+            <button type="submit">Search</button>
+            </p>
+        </form>
+
+        <div id="displayForecast"></div>
+        <!-- div to hold map -->
+        <div id="map-canvas"></div>
+   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- jQuery Version 2.2.4 -->
+   <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+   <!-- Bootstrap Core JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <!-- Custom JS -->
+
+<script>
+$(document).ready(function(){
+    "use strict";
+
+    var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
+    var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+    // make a function for making an Ajax request to the OpenWeatherMap API to return a weather object
+    function getWeather() {
+        $.get(url, {
+            APPID: APPID,
+            q: "San Antonio",
+            // lat: 29.423017,
+            // lon: -98.48527,
+            cnt: 3,
+            units: "imperial"
+        }).fail(function(data, status) {
+            alert("Failed to load:" + status);
+        }).done(function(weather) {
+            $("#city").append(weather.city.name);
+            console.log(weather);
+            showWeather(weather.list);
+
+        });
+    }
+    function showWeather(forecasts) {
+            var htmlString ="";
+        forecasts.forEach(function(forecast,index){
+            htmlString += "<div class='weatherBox col-md-4'><h4>Day " + (index + 1)+"</h4>";
+            htmlString += "<p id='temp'>" + parseInt(forecast.temp.max) + "&deg" + "/" + parseInt(forecast.temp.min) + "&deg" + "</p>"
+            htmlString += ("<img src = 'http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png'>");
+            htmlString += "<p><strong>" + (forecast.weather[0].main) + ":</strong> " +(forecast.weather[0].description) + "</p>"
+            htmlString += "<p><strong>" + "Humidity:</strong> " + (forecast.humidity) +"%" + "</p>"
+            htmlString += "<p><strong>" + "Wind:</strong> " + (forecast.speed) + "mph</p>"
+            htmlString += "<p><strong>" + "Pressure:</strong> " + (forecast.pressure) + " mb" + "</p>"
+            htmlString += "</div>";
+        });
+
+        $("#displayForecast").html(htmlString);
+    }
+
+    getWeather();
+
+
+
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApJ6g3qrKKlV3m1ObJc_ItvAiZ2-tj79k">
+</script>
+<script type="text/javascript">
+    // Set our map options
+    var mapOptions = {
+    // Set the zoom level
+        zoom: 11,
+    // This sets the center of the map at our location
+        center: {
+            lat:  29.426791,
+            lng: -98.489602
+        }
+    };
+
+    // Render the map
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    // Create lat and long for our marker position
+    var codeup = { lat: 29.426791, lng: -98.489602 };
+    // Add the marker to our existing map
+    var marker = new google.maps.Marker({
+    position: codeup,
+    map: map,
+    draggable: true
+});
+</script>
+</body>
+
+</html>

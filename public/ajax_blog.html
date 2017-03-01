@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Get Blogging</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+    <!-- Page Content -->
+    <main class="container">
+        <h1>Welcome to blogging</h1>
+        <button id="refresh">Refresh</button>
+        <div id="posts"></div>
+
+    </main>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script>
+    $(document).ready(function() {
+        "use strict";
+
+// //======================================
+// //         Retrieving JSON Data
+// //======================================
+
+    // var request =$.ajax ({
+    //     url: "/data/blog.json",
+    //     type: "GET"
+    // });
+
+    // request.done(function(data){
+    //     data.forEach(function(blog, index){            
+    //     	var htmlString = "";
+    //     	htmlString += "<h1>" + blog.title + "</h1>";
+    //     	htmlString += "<p>" + blog.content + "</p>";
+    //         htmlString += "<p>" + blog.date + "</p>";
+    //     	console.log(blog);
+    //     	$("#posts").append("<h1>" + blog.title + "</h1>" +"<p>" + blog.content + "</p>"+ "<footer>" + blog.date + "</footer>");
+    //     });
+
+    // });
+
+    // request.fail(function(data, status){
+    //     console.log(status);
+    // });
+
+// //======================================
+// //         Refresh Ajax
+// //======================================
+
+//     // $("#refresh").click(function(){
+//     //     var request =$.ajax ({
+//     //     url: "/data/blog.json",
+//     //     type: "GET"
+//     // });
+
+//     // request.done(function(data){
+//     //     data.forEach(function(blog, index){            
+//     //         var htmlString = "";
+//     //         htmlString += "<h1>" + blog.title + "</h1>";
+//     //         htmlString += "<p>" + blog.content + "</p>";
+//     //         console.log(blog);
+//     //         $("#posts").append("<h1>" + blog.title + "</h1>" +"<p>" + blog.content + "</p>"+ "<footer>" + blog.categories + "</footer>");
+//     //     });
+
+//     // });
+
+//     // request.fail(function(data, status){
+//     //     console.log(status);
+//     // });
+
+
+
+//=====================================
+//          Ryan's Method
+//=====================================
+// In the problem solving process, outline the main steps/sequences of stuff we need to do. 
+
+// Step 1 is make sure we can send an AJAX request to the source data
+// Make an AJAX request to /data/blog.json to get the data
+// Console.log that data
+
+    // 1. send an AJAX get request to /data/blog.json => google "how to send ajax GET request in jQuery"
+        // where are we sending our request to get the data from?
+        // send the GET request there
+    // 2. always define the function that the .fail method calls => "how to define a .fail method in jQuery"
+    // 3. always define the function that the .done method calls => "how to define a .done method in jQuery"
+    // 3.5 have .fail/.done console.log "success" or "error"
+    // 4. start with both .fail and .done only console.logging the data they get
+
+        var url ="/data/blog.json";
+
+        var request = $.get(url);
+
+        // request.fail(function(){}); is a callback. a callback is when the function fires up. in this case, if it fails, the callback will run and show error in the console log
+       
+
+//====================================
+//           Calling AJAX
+//====================================
+        request.fail(function(data) {
+            console.log(data);
+        });
+
+        request.done(function(data) {
+            console.log(data);
+
+            var post = data[0];
+
+            var htmlString ="";
+
+            data.forEach(function(post){
+                    //the class="container has predefined css styling using bootstrap."
+                htmlString += "<article class='container'>";
+                htmlString += "<h1 class='title'>" + post.title + "</h1>";
+                htmlString += "<p class='invisible notInvisible'>" + post.content + "</p>";
+                htmlString += "<p class='invisible notInvisible'> published at: " + post.date + "</p>";
+                htmlString += "<p class='invisible notInvisible'>categories: <button>" + post.categories + "</button></p>";
+                htmlString += "</article>";
+
+            });
+
+            $("#posts").html(htmlString);
+            $(".title").click(function(){
+                $(".notInvisible").toggleClass("invisible");
+            });
+
+        });
+
+
+
+
+//=========================================
+//           Refresh Button
+//=========================================
+    $("#refresh").click(function(){
+        var url = "/data/blog.json";
+        var request = $.get(url);
+
+        request.fail(function(data){
+            console.log("failed");
+        });
+
+        
+        request.done(function(data) {    
+
+            var htmlString = "";
+
+            data.forEach(function(post){
+
+                htmlString += "<article class='container'>";
+                htmlString += "<h1>" + post.title + "</h1>";
+                htmlString += "<p>" + post.content + "</p>";
+                htmlString += "<p> published at: " + post.date + "</p>";
+                htmlString += "<p>categories: <button>" + post.categories + "</button></p>";
+                htmlString += "</article>"; 
+            });
+
+            $("#posts").html(htmlString);
+
+        });
+    });
+
+
+// Step 2 is decide what HTML elements the data should be
+// the blog.json data has an array of blog posts
+// Each blog post is represented as an object
+// the object's properties are:
+// title is a string - make the title an h2 element
+// content is a string - make the content a p tag
+// categories is an array of strings - make each category string into a button element
+// date is a string - make this a p tag
+
+// Step 3 is to get the contents of just ONE blog post into the HTML of the div with id="posts"
+// get each peiec of data in the right HTML Tag
+// add any styling (add appropriate bootstrap class names to HTML elements)
+
+//Step 4 is to get all the blog posts into the HTML
+//which means we need to iterate across the array and use JS to write HTML 
+
+//Step 5 add a button that refreshes the data without reloading the entire browser/page
+// to test this, we'll add new blog content (even if it's loren ipsum) to blog.json
+//and click the refresh button without reloading the page
+
+// Step 6 for each category of each blog post, write the catgory's string inside a button
+
+// Step 7, add a .click to the title so that by clicking the title it shows the content of the post
+
+// Do Zach's JS drills
+
+    });
+	</script>
+
+</body>
+
+</html>

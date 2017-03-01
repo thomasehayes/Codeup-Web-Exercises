@@ -36,6 +36,9 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
+//======================================
+//         Retrieving JSON Data
+//======================================
 
     var request =$.ajax ({
         url: "/data/inventory.json",
@@ -53,6 +56,9 @@
         console.log(status);
     });
 
+//======================================
+//         Refresh Ajax
+//======================================
 
     $("#refresh").click(function(){
         var request =$.ajax ({
@@ -62,7 +68,7 @@
     request.done(function(data){
         $("#insertProducts").html("");
         data.forEach(function(tool, index){            
-            $("#insertProducts").append("<tr>"+ "<td>"+ tool.title+ "</td>" + "<td class='quantity'>" +tool.quantity + "</td>" +  "<tdclass='price'>" + tool.price + "</td>"+ "<td>" + tool.categories + "</td>" + "</tr>");
+            $("#insertProducts").append("<tr>"+ "<td>"+ tool.title+ "</td>" + "<td class='quantity'>" +tool.quantity + "</td>" +  "<td class='price'>" + tool.price + "</td>"+ "<td>" + tool.categories + "</td>" + "</tr>");
         });
 
     });
@@ -72,6 +78,14 @@
     });
     });
 
+
+
+
+
+
+//======================================
+//         Ryan's Methodology
+//======================================
     // var url = "/data/inventory.json";
     // var request = $.get(url);
 
@@ -82,7 +96,6 @@
     // request.done(function(data){
     //     console.log(data);
 
-    //     //ryan's way 
     //     //Step 1
     //     var tool = data[0];
 
