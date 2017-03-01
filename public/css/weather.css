@@ -1,0 +1,29 @@
+#map-canvas {
+    width: 760px;
+    height: 350px;
+    margin-bottom: 5px;
+}
+
+.weatherBox{
+    width: 250px;
+    height: 240px;
+    background-color: #d3d3d3;
+    border: solid 1px black;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+#temp {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container {
+    background-color: lightblue;
+}
+
+#searchField {
+    text-align: left;
+}
