@@ -1,0 +1,25 @@
+Planning out the project
+	a) write out all the rules for Simple Simon in your own words with clear and simple language
+		-make sure you can clearly describe the game
+		-make sure you understand all the steps of playing the game
+		-make sure you understand how to pass a round and how to lose the game
+
+	b) draft the logical steps of your game using pseudo-code (BE SPECIFIC - these steps will be the beginning of your comments)
+		-consider any global variables you will need to define
+		-consider all functions you will need to execute processes to run the game
+		-consider all events you will need to interact with the game
+
+	c) consider what extra features you want to eventually add
+
+	d) plan out the design or theme you eventually will create
+
+this is like the pseudo-code stuff
+"animate random square"
+-generate a random number between 1-4
+-use that random number along w/ jQuery selector
+-"animate" - changing opacity? does the div change colors?
+
+"play back animation sequence"
+-"animate" each html element (jQuery selector) on an array
+
+if there's functionality that both simon needs and that you need for the user's turn, that's probably a function

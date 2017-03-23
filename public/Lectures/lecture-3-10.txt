@@ -1,0 +1,49 @@
+Loop
+- for repetition
+- with different data / modifying inside the loop
+- they either know when to stop or when to continue
+
+While (condition) { // it might run 0 times
+}
+	- condition -> when to continue
+	- boolean expression -> something that return true/false
+	- when to use it?
+		- if you probably don't want to repeat the code not even once
+
+do {
+	
+} white (condition) // it will run at least one time
+
+- Use this when you want to repeat the code at least once
+- while - do while -> because you can't count
+- for -> because you can count
+
+// counter -> know in advance how many times the code will be repeated
+// because you're counting
+// for arrays
+
+  //initialization	      //increment
+for (var i = 0 ;condition; i++) {
+	
+}
+
+
+PHP need this as their file
+<?php
+
+?>
+
+Make sure you always use ; to close a statement or it won't work
+
+this is important to remember
+$name = "thomas";
+**********var_dump("$name");************
+it will show the data type of the variable and what it is equaled to.
+
+double vs single quotes
+if you use single quotes around a variable, it will come out as a string
+if you use double quotes around variables, it will call whatever the variable is set to.
+	you can add a string with the variables to display everything as a string.
+	echo "My first name is: $fName. My last name is $lName";
+
+concantenating is php uses a dot (.)

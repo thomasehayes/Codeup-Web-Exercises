@@ -36,7 +36,6 @@
     <script>
         "use strict";
         $(document).ready(function(){
-
     		var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     		var keys= [];
 
@@ -51,7 +50,7 @@
             if(keys.toString() == konami.toString()) {
                 $("body").fadeOut(1000, redirectPage);
 
-            	function redirectPage() {window.open("https://www.youtube.com/v/WxfZkMm3wcg?rel=o&autoplay=1", "_self");
+            	function redirectPage() {location.href = "https://www.youtube.com/v/WxfZkMm3wcg?rel=o&autoplay=1", "_self";
             }
             }
         });

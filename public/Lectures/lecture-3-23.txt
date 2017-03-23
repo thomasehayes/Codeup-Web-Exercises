@@ -1,0 +1,18 @@
+How a page renders in order
+
+1. PHP
+2. HTML DOM
+3. JS
+
+MVC stands for Model-View-Controller
+	M = the data layer of the application
+		readsFile
+
+	V = file that shows the data (the presentation layer)
+		showsContacts
+		like foreach loops
+		showing me how the data looks like once the function is ran
+
+	C = provides the glue that brings the Model and View together
+		takes the data from the Model and do something
+		ex. addContact($filename);

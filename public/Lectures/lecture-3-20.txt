@@ -1,0 +1,8 @@
+When sorting, if the function has a 'r' in the name before sort, it will sort by descending order, otherwise, it will sort ascending 
+
+if you sort with sort(), rsort(), shuffle(), you will lose the associative keys in the array. 
+
+
+the 'a' in asort() stands for associative
+the 'k' in ksort() stands for keys
+

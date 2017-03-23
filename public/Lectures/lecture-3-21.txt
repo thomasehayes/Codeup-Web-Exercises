@@ -1,0 +1,54 @@
+=======Reading files
+
+1. Create a pointer to the file stream
+2. Read the stream to a specified end point
+3. Manipulate the read stream contents
+4. Close the stream
+
+
+
+example
+// Specify file name or path
+$file = "example.txt";
+
+// Create a file pointer and opens a stream resource object
+$handle = fopen($file, "r");
+
+/* 
+	"Streams are the way of generalizing file, network, data compression, and other operations which share a common set of functions and uses. In its simplest definition, a stream is a resource object which exhibits streamable behavior. That is, it can be read from or written to in a linear fashion..."
+														-PHP Documentation
+*/
+
+// Determine how many characters contained in the file
+// echo filesize($file);
+
+// Read contents of file stream at the specified handle and up to the indicated size (all of the file)
+$contents = fread($handle, filesize($file));
+
+echo $contents;
+
+
+// ECHO OUT RESTAURANTS IN ALL CAPS AND IN ALPHABETICAL ORDER
+
+function parseFileToOrderedCaps($string) {
+	$contentArr = explode("\n", $string);
+	var_dump($contentArr); // to see if it became an array, erase when done.
+	sort($contentsArr);
+	foreach($contentArr as $content) {
+		echo strtoupper($content) . PHP_EOL;
+	}
+}
+
+parseFileToOrderedCaps($contents);
+
+
+// Close file pointer to avoid security breaches and free the file up to be used by another program execution
+fclose($handle);
+
+// File Reading Recap
+
+$file = 'example.txt';
+$handle = fopen($file, 'r');
+$contents = fread($handle, filesize($file));
+// Do something/whatever you want
+fclose($handle);

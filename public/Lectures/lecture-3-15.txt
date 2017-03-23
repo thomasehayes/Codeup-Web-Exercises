@@ -1,0 +1,26 @@
+in iTerm
+to collaborate with others in github
+type in 
+git clone // copy of the file name from github// optional - what to name folder 
+````git clone git@github.com:CodeupClassroom/high_low.git highlow````
+4 parts
+- git (because we're running a git command
+- clone (because we want to clone a repository)
+- the address of the repository 
+- (optional) name or location of where the repo goes
+
+
+to create a new branch
+git branch name of branch
+
+
+to list current branches
+git branch
+
+to get into branch
+git checkout name of branch
+
+git status will tell you what branch you're in. 
+
+how to push new branch to github
+git push -u origin name of branch
