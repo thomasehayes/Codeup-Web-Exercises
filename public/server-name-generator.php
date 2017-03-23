@@ -13,6 +13,9 @@ function randomNouns() {
 	
 } 
 
+function randomServerName() {
+	return randomAdjectives() . " " . randomNouns();
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +24,6 @@ function randomNouns() {
 	<title>Server Name Generator</title>
 </head>
 <body>
-<?php echo randomAdjectives(). "<br>"; ?>
-<?php echo randomNouns(); ?>
+<?php echo randomServerName(); ?>
 </body>
 </html>
