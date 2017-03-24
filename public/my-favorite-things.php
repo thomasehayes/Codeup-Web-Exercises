@@ -1,8 +1,16 @@
 <?php 
 
-$favoriteThingsArray = ['Chick-fil-a', 'My Dog', 'Boosted Board', 'YouTube', 'Fried Chicken'];
+function pageController() {
+	$data = [];
 
+	$data['favoriteThingsArray'] = ['Chick-fil-a', 'My Dog', 'Boosted Board', 'YouTube', 'Fried Chicken'];
+	
+	return $data;
+}
+
+extract(pageController());
 ?>
+
 
 <!DOCTYPE html>
 <html>
