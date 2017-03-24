@@ -24,6 +24,7 @@ function randomServerName() {
 	<title>Server Name Generator</title>
 </head>
 <body>
-<?php echo randomServerName(); ?>
+	<h1><?php echo randomServerName(); ?></h1>
+	
 </body>
 </html>
