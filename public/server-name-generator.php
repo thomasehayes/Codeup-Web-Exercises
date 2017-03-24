@@ -13,9 +13,21 @@ function randomNouns() {
 	
 } 
 
-function randomServerName() {
-	return randomAdjectives() . " " . randomNouns();
+// function randomServerName() {
+// 	return randomAdjectives() . " " . randomNouns();
+// }
+
+function pageController() {
+	$data = [];
+
+	$data['randomServerName'] = randomAdjectives() . " " . randomNouns();
+
+	return $data;
 }
+
+
+extract(pageController());
+
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +37,12 @@ function randomServerName() {
 	<style type="text/css">
 		h1 {
 			text-align: center;
+			font-size: 100px;
 		}
 	</style>
 </head>
 <body>
-	<h1><?= randomServerName(); ?></h1>
+	<h1><?= $randomServerName; ?></h1>
 
 </body>
 </html>
