@@ -22,9 +22,14 @@ function randomServerName() {
 <html>
 <head>
 	<title>Server Name Generator</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 	<h1><?php echo randomServerName(); ?></h1>
-	
+
 </body>
 </html>
