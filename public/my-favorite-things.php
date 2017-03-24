@@ -28,15 +28,12 @@ $favoriteThingsArray = ['Chick-fil-a', 'My Dog', 'Boosted Board', 'YouTube', 'Fr
 		</thead>
 		<tbody>
 			<tr>
-				<?php 
-					foreach ($favoriteThingsArray as $key => $thing) {
-						echo "<tr>
-								<td>" . ($key + 1) . "</td>
-								<td>" . $thing . "</td>
-							  </tr>";
-
-					}
-				 ?>
+				<?php foreach ($favoriteThingsArray as $key => $thing) : ?>
+					<tr>
+						<td> <?= ($key + 1) ?></td>
+						<td> <?= $thing ?> </td>
+					</tr>
+				<?php endforeach ?>
 			</tr>
 		</tbody>
 	</table>

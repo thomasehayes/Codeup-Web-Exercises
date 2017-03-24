@@ -29,7 +29,7 @@ function randomServerName() {
 	</style>
 </head>
 <body>
-	<h1><?php echo randomServerName(); ?></h1>
+	<h1><?= randomServerName(); ?></h1>
 
 </body>
 </html>
