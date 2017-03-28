@@ -15,7 +15,7 @@ if(!empty($_POST)) {
 		header("Location: /authorized.php");
 		exit;
 	} else {
-		$message = "Please retry your username or password";
+		$message = "Either username or password were incorrect";
 		
 	}
 }
