@@ -11,11 +11,9 @@ if(!empty($_POST)) {
 	$username = isset($_POST['username']) ? $_POST['username'] : "";
 	$password = isset($_POST['password']) ? $_POST['password'] : "";
 	if($username == "guest" && $password == "password") {
-		 $_SESSION['logged_in_user'] = $_POST['username'];
-		if(isset($_SESSION['logged_in_user'])){
-			header("Location: /authorized.php");
+		$_SESSION['logged_in_user'] =$username;
+		header("Location: /authorized.php");
 		exit;
-	}
 	} else {
 		$message = "Please retry your username or password";
 		
