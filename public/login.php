@@ -22,7 +22,6 @@ if(!empty($_POST)) {
 	}
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +47,7 @@ if(!empty($_POST)) {
 		background-image:url("img/background.jpg");
 	}
 
-	h1, label {
+	.white {
 		color: white;
 	}
 
@@ -56,25 +55,23 @@ if(!empty($_POST)) {
 		top: 100px;
 		left: 100px;
 	}
+
 </style>
 
 
 </head>
 <body>
 	<main class="container col-xs-6 col-md-offset-4" >
-		<h1>Login to gain access!</h1>
-		<p><?= $message ?></p>
-		<?php if(!empty($image)): ?>
-			<img src="<?= $image ?>">
-		<?php endif; ?>
+		<h1 class="white">Login to gain access!</h1>
+		<p class="white"><?= htmlspecialchars(strip_tags($message)) ?></p>
 
 		<form action="/login.php" method="POST" class="col-xs-4">
 			<div class="form-group">
-		    	<label for="username">Username</label>
+		    	<label for="username" class="white">Username</label>
 		    	<input type="text" name="username" class="form-control" id="username" placeholder="Username">
 		  	</div>
 		  	<div class="form-group">
-    			<label for="password">Password</label>
+    			<label for="password" class="white">Password</label>
     			<input type="password" name="password" class="form-control" id="password" placeholder="Password">
   			</div>
   			<button type="submit" class="btn btn-default">Login</button>
