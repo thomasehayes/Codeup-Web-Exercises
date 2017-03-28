@@ -40,6 +40,8 @@ clearSession();
 
     body {
         background-image:url("img/background.jpg");
+        overflow-y:hidden;
+        overflow-x:hidden;
     }
     h1 {
         color: white;

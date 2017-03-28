@@ -34,6 +34,8 @@ extract(pageController());
 <style>
     body {
     background-image:url("img/background.jpg");
+    overflow-y:hidden;
+    overflow-x:hidden;
     }
 
     h1, h3 {
@@ -61,7 +63,7 @@ extract(pageController());
         <a href="logout.php">Logout</a>
 
 	</main>
-    
+
 	<!-- minified jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 

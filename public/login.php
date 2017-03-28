@@ -43,6 +43,8 @@ if(!empty($_POST)) {
 <style>
 	body {
 		background-image:url("img/background.jpg");
+		overflow-y:hidden;
+		overflow-x:hidden;
 	}
 
 	.white {
