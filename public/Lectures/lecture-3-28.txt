@@ -1,0 +1,90 @@
+Protective Measures
+
+strip_tags() - removes all tags from a string
+	so you can't write <em>test</em> in a input on a form and expect to see it italisized. 
+htmlentities() - encodes many different special characters into HTML
+
+htmlspecialchars() - encodes a few special characters into HTML http://www.ascii.cl/htmlcodes.htm
+
+always add htmlspecialchars(strip_tags()) in the echos of the php html lines
+
+create a function for it
+
+function output($string) {
+// parameters are like local variables inside of function
+// parameters are given values (assigned) when you call te function and pass it a value. 
+	echo htmlspecialchars(strip_tags($string));
+}
+
+
+
+example of using it as a function
+<?php
+    $items = array('Item One', 'Item Two', 'Item Three');
+    $allItems = array_merge($items, $_POST);
+
+    function output($string) {
+	echo htmlspecialchars(strip_tags($string));
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alternative Syntax</title>
+</head>
+<body>
+    <h1>List of Items</h1>
+
+    <ul>
+    <?php foreach ($allItems as $item): ?>
+        <li><?php output($item); ?></li>
+    <?php endforeach; ?>
+    </ul>
+
+    <form method="POST" action="/form-example.php">
+        <input type="text" id="newitem" name="newitem" placeholder="Add new todo item">
+        <input type="submit" value="add">
+    </form>
+</body>
+</html>
+
+
+
+==============SESSIONS
+    - Server retains knowledge for a defined period of time about your conntection
+    - A part of the Controller
+        - figures out what the request is
+        - determine hwo to respond to it
+    - work in cognito mode to see if sessions are working correctly 
+
+Example: 
+    - "Keep me logged in" checkbox UI (creating a session)
+    - gmail.com logs you in automatically
+    - bank websites logging you out automatically (your session times out)
+    - shopping cart
+    - preferences (you looked at these items last time)
+    - keep people authenticated or not
+
+login.php
+    php at the top checks to see if $_POST isn't empty
+    then checks to make sure username and password are okay
+    assign a session key called logged_in_user to the username of the logged in user.
+    $_SESSION['logged_in_ser'] = ...
+    if so, redirect to authorized
+    check to see if the user is already logged in..
+
+authorized.php (access control)
+    add a check (a conditional) to see if the user is "logged in" already
+    if already logged in, show them authorized.php
+    if not already logged in, redirect to login.php
+    any link to logout, href="/logout.php"
+
+logout.php
+    clearSession()
+    informs the user that they're logged out
+    provide a link to login.php
+
+try navigating to authorized.php before logging in
+try navigating to authorized.php after logging out
+login and then try navigating to login.php. we want it to forward automatically to authorized.php

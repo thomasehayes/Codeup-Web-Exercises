@@ -1,5 +1,5 @@
 <?php
-
+var_dump($_GET);
 // on page load, set counter to 0
 // make a button or link that increments the counter by 1
 // make a button or link that decreases the counter by 1
@@ -38,9 +38,10 @@ extract(pageController());
 </head>
 <body>
 	<main class="container">
+		<h1>Pong!</h1>
 		<h1>Counter: <?= $count ?></h1>
-		<a class="btn btn-primary" href="counter.php?count=<?= $count +1 ?>">Up</a>
-		<a class="btn btn-primary" href="counter.php?count=<?= $count -1 ?>">Down</a>
+		<a class="btn btn-primary" href="ping.php?count=<?= $count +1 ?>">Hit</a>
+		<a class="btn btn-primary" href="ping.php?count=0">Miss</a>
 
 
 	</main>
