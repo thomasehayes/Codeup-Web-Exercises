@@ -1,0 +1,15 @@
+=======INCLUDE REQUIRE
+
+-- Definition --
+	Include and require are PHP statements that enable us to access code form other files and keep our code more modular and organized. 
+
+-- Syntax --
+include "sample.file"
+include ("sample.file")
+
+-- When to use Include vs. Require --
+Use require when you have certain functionality that needs to be used in that page, otherwise use include since it won't break the page
+	Use require once
+
+Use require_once for any files that contain functions, variables, or classes
+Use include if its purely HTML tags

@@ -1,5 +1,7 @@
 <?php
-var_dump($_GET);
+
+require_once "functions.php";
+
 // on page load, set counter to 0
 // make a button or link that increments the counter by 1
 // make a button or link that decreases the counter by 1
@@ -8,8 +10,8 @@ function pageController() {
 	$data = [];
 	
 	//if a value exists, get that value and assign to variable, else assign default value
-	if(isset($_GET['count']) && is_numeric($_GET['count'])) {
-		$data['count'] = $_GET['count'];
+	if(inputHas('count')) {
+		$data['count'] = inputGet('count');
 	} else {
 		$data['count'] = 0;
 	}
@@ -39,7 +41,7 @@ extract(pageController());
 <body>
 	<main class="container">
 		<h1>Ping!</h1>
-		<h1>Counter: <?= $count ?></h1>
+		<h1>Counter: <?= escape($count) ?></h1>
 		<a class="btn btn-primary" href="pong.php?count=<?= $count +1 ?>">Hit</a>
 		<a class="btn btn-primary" href="pong.php?count=0">Miss</a>
 

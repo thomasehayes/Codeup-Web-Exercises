@@ -1,5 +1,5 @@
 <?php 
-
+require_once "functions.php";
 session_start();
 
 // get the current session ID
@@ -8,8 +8,8 @@ $sessionId = session_id();
 $message = "";
 // check if the form was submitted
 if(!empty($_POST)) {
-	$username = isset($_POST['username']) ? $_POST['username'] : "";
-	$password = isset($_POST['password']) ? $_POST['password'] : "";
+	$username = inputGet('username');
+	$password = inputGet('password');
 	if($username == "guest" && $password == "password") {
 		$_SESSION['logged_in_user'] =$username;
 		header("Location: /authorized.php");
@@ -63,7 +63,7 @@ if(!empty($_POST)) {
 <body>
 	<main class="container col-xs-6 col-md-offset-4" >
 		<h1 class="white">Login to gain access!</h1>
-		<p class="white"><?= htmlspecialchars(strip_tags($message)) ?></p>
+		<p class="white"><?= escape($message); ?></p>
 
 		<form action="/login.php" method="POST" class="col-xs-4">
 			<div class="form-group">

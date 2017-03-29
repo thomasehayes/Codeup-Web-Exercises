@@ -1,4 +1,5 @@
 <?php 
+require_once "functions.php";
 session_start();
 
 function pageController() {
@@ -54,7 +55,7 @@ extract(pageController());
 </head>
 <body>
 	<main class="container col-xs-6 col-md-offset-3">
-		<h3>User: <?= htmlspecialchars(strip_tags($logged_in_user)); ?> 
+		<h3>User: <?= escape($logged_in_user); ?> 
             <br>has been
         </h3>
 
