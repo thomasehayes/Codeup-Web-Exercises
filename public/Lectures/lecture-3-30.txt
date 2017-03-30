@@ -1,0 +1,77 @@
+Object-Oriented Programming (OOP)
+
+OOP - Programming with objects and classes
+
+Why OOP 
+	- organizing code/data, makes code more DRY - Do Not Repeat yourself
+	- Allows for scaling up code
+	- Modular easier to pick out pieces to work on
+	- Easier to visualize
+
+Class - template - blue print for an object
+
+Object - Product of a class, collection of behaviors and state
+
+Instantiation - Calling the class to make an object
+
+Property - Characteristic  of a class / variable in a class
+
+Method - function in a class 
+
+$this - refers to the instance of a class / object
+
+
+constructors / Destructors
+
+General Information
+
+Constructor - a method that is automatically called when an object is instantiated.
+
+Destructor - a method that is automatically called when an object is unset or the scripts have completed execution
+
+Both constructors and destructors in PHP are examples of magic methods
+
+Magic Methods - methods in a class that are called "magically" by PHP and not directly in code wirtten by the developer
+
+Syntax in a class
+
+public function __construct() {
+	//do something when a new object is instantiated
+}
+
+public function __destruct() {
+	//do something ... 
+}
+
+-- Practical Application --
+The constructor is most often used to set default values at the time of object instantiation
+
+The destructor is most often used to execute a shut down sequence to clean up any open resources (e.g. closing a database connection, closing file, etc.)
+
+example 
+<?php
+
+public class Test {
+	public function __construct() 
+	{
+		echo "hello";
+	}
+	public function __destruct() 
+	{
+		echo "bye";
+	}
+}
+?>
+
+<?php
+
+require_once "";
+$testClass = new Test();
+// this will show hello and bye
+
+unset($testClass);
+var_dump($testClass);
+// will get a warning because we unset it
+
+
+?>
