@@ -1,5 +1,7 @@
 <?php 
 require_once "functions.php";
+require_once "../Auth.php";
+require_once "Input.php";
 session_start();
 
 // get the current session ID
@@ -7,19 +9,12 @@ $sessionId = session_id();
 
 $message = "";
 // check if the form was submitted
-if(!empty($_POST)) {
-	$username = inputGet('username');
-	$password = inputGet('password');
-	if($username == "guest" && $password == "password") {
-		$_SESSION['logged_in_user'] =$username;
-		header("Location: /authorized.php");
-		exit;
-	} else {
-		$message = "Either username or password were incorrect";
-		
-	}
-}
 
+if (Input::has('username') && Input::has('password')) {
+	Auth::attempt(Input::get('username'), Input::get('password'));
+	$message = "Either username or password were incorrect";
+}
+	
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +22,8 @@ if(!empty($_POST)) {
 <head>
 
 	<title>Login</title>
-	<<?php include_once "header.php"; ?>
+	<?php include_once "header.php"; ?>
+
 <!-- Custom CSS -->
 
 <style>
