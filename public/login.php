@@ -4,20 +4,23 @@ require_once "../Auth.php";
 require_once "Input.php";
 session_start();
 
-// get the current session ID
-$sessionId = session_id();
+function pageController() {
+	$data = [];
+	$data['message'] = "";
+	// check if the form was submitted
 
-$message = "";
-// check if the form was submitted
-
-if (Input::has('username') && Input::has('password')) {
-	Auth::attempt(Input::get('username'), Input::get('password'));
-	$message = "Either username or password were incorrect";
-} else if (Auth::check() == true) {
-	header("Location: /authorized.php");
-	exit;
-}
+	if (Input::has('username') && Input::has('password')) {
+		Auth::attempt(Input::get('username'), Input::get('password'));
+		$data['message'] = "Either username or password were incorrect";
+	} else if (Auth::check()) {
+		header("Location: /authorized.php");
+		exit;
+	}
+	return $data;
 	
+}
+
+extract(pageController());	
 ?>
 
 <!DOCTYPE html>

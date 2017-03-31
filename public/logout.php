@@ -3,7 +3,11 @@ require_once "functions.php";
 require_once "../Auth.php";
 session_start();
 
-Auth::logout();
+function pageController() {
+    Auth::logout();  
+}
+
+pageController();
 
 ?>
 
