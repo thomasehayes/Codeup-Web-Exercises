@@ -13,6 +13,9 @@ $message = "";
 if (Input::has('username') && Input::has('password')) {
 	Auth::attempt(Input::get('username'), Input::get('password'));
 	$message = "Either username or password were incorrect";
+} else if (Auth::check() == true) {
+	header("Location: /authorized.php");
+	exit;
 }
 	
 ?>

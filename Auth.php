@@ -8,27 +8,32 @@ class Auth {
 
 	public static function attempt($username, $password) 
 	{
+		$logger = new Log();
 		if($username == "guest" && password_verify($password, self::$password)) {
 			$_SESSION['logged_in_user'] = $username;
-			header("Location: /authorized.php");
-			exit;
-		} 
+			if (isset($_SESSION['logged_in_user'])) {
+				$logger->logInfo("User {$username} logged in.");
+				header("Location: /authorized.php");
+				exit;
+			}
+		} else {
+			$logger->logError("User {$username} failed to log in!");
+		}
 	}
 
-	// public static function check()
-	// {
-		// if($username == "guest" && $password == $this->password) {
-		// 	$_SESSION['logged_in_user'] = $username;
-		// 	header("Location: /authorized.php");
-		// 	exit;
-		// } else {
-		// 	$message = "Please Log In.";
-		// }
-	// }
-	// public static function user() 
-	// {
+	public static function check()
+	{
+		if(isset($_SESSION['logged_in_user'])) {
+        	return true;
+    	} else {
+    		return false;
+    	}
+	}
 
-	// }
+	public static function user() 
+	{
+		return ['username'=> $_SESSION['logged_in_user']];
+	}
 
 	public static function logout()
 	{
