@@ -1,0 +1,67 @@
+Relationships
+--------
+
+1:1 relationship == data is on the same table
+
+users
+id, username, password, email
+1, billybob, supersecurepassword, billy@bob.bob
+
+blog_posts
+id, title, subject
+1, Super Title, about titles
+
+--------
+1:Many == user/post, owners/automobiles
+Foreign key goes on the 'many' table
+
+1 user has many blog posts
+mang blog posts belong to one user
+
+users
+id, username, password
+1, todd, password
+2, ryan, password
+
+Posts
+id, title, subject, user_id
+1, hello wolrd, omg hello world, 1
+
+--------
+Many:Many Relationship
+
+ex. A blog post can have many categories
+	Category can have many blog posts
+ex. employees table, dept table, dept_employees table
+
+An employee have many depts? yes
+does a dept have many employees? yes
+
+categories
+id, category
+1, front-end
+2, jQuery
+3, javascript
+4, backend
+5, PHP
+
+category_post
+post_id, category_id
+1, 3
+1, 4
+2, 1
+2, 2
+2, 3
+
+posts
+id, title, subject, user_id
+1, how to start using node, ..., 1      javascript, backend
+2, how I learned to stop worrying and love jquery, 1
+
+
+select * 
+from posts
+join category_post on post.id= category_post.post_id
+join category on category.id = category_post.category_id
+
+

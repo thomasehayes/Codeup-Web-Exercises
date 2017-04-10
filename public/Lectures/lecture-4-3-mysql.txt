@@ -1,0 +1,85 @@
+MySQL users  aren't the same thing as application user
+	-Mysql users are users/connections authorized to manipulate the db
+	-Scenerio is 3 apps on the same server
+		todo, craigslist, dating app
+		for the todo app, we'll have a mysql user called todo_user
+			GRANT SELECT, INSERT, UPDATE, DELETE ON todo_db.* TO 'todo_user'$'localhost';
+
+		for the todo app, we'll have a mysql user called craigslist_user
+		for the todo app, we'll have a mysql user called dating_user
+
+	Each application should have its own mysql user that only has access to that application's db.
+
+mysql == relational database management system
+'database' or 'mysql' to mean the database system, or a specific database
+
+mysql has multiple databases
+
+
+	Finding the Current User
+		SELECT current_user;
+
+	Listing Users
+		SELECT user, host FROM mysql.user;
+
+	Creating a User
+		CREATE USER 'billy'@'localhost' IDENTIFIED BY 'billysSecretP@ass123';
+
+	Host Wildcards
+		CREATE USER 'billy'@'192.168.77.%' IDENTIFIED BY 	'billysSecretP@ass123';
+
+	Privileges
+		GRANT ALL ON *.* TO 'billy'@'localhost';
+
+		GRANT SELECT ON *.* TO 'read_only'@'%';
+
+		GRANT SELECT, INSERT, UPDATE, DELETE ON sally_db.sallys_table TO 'sally'@'192.168.77.1';
+
+		GRANT CREATE, ALTER, INSERT, DROP ON office_db.* TO 'office_user'@'192.168.77.%';
+
+		GRANT ALL ON *.* TO 'billy'@'localhost' WITH GRANT OPTION;
+
+	Dropping a User
+		DROP USER 'sally'@'192.168.77.1';
+
+	Flushing Privileges
+		FLUSH PRIVILEGES;
+
+	Creating a Database
+		CREATE DATABASE database_name;
+		
+		CREATE DATABASE IF NOT EXISTS database_name;
+
+	Listing Databases
+		SHOW DATABASES;
+
+	Selecting a Database
+		USE database_name;
+
+	Showing Current Database
+		SELECT database();
+
+	Inspecting a Database
+		SHOW CREATE DATABASE database_name;
+
+	Deleting a Database
+		DROP DATABASE database_name;
+
+		DROP DATABASE IF EXISTS database_name;
+
+	Creating Tables
+		CREATE TABLE table_name (
+		    column1_name data_type,
+		    column2_name data_type,
+		    ...
+		);
+
+	Primary Keys
+		CREATE TABLE quotes (
+		    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+		    author_first_name VARCHAR(50),
+		    author_last_name  VARCHAR(100) NOT NULL,
+		    content TEXT NOT NULL,
+		    PRIMARY KEY (id)
+		);
+	
